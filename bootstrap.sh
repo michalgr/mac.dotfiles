@@ -5,6 +5,9 @@ DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 echo "==> Bootstrapping dotfiles from $DOTFILES_DIR"
 
+# 0. Initialize git submodules (e.g. tmux-config)
+git -C "$DOTFILES_DIR" submodule update --init --recursive
+
 # 1. Install Homebrew packages
 if command -v brew &>/dev/null; then
   echo "==> Installing packages from Brewfile..."

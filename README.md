@@ -15,7 +15,7 @@ Personal macOS dotfiles managed declaratively using **Homebrew** and **GNU Stow*
 ├── git/                   # Git & Delta diff configuration
 ├── helix/                 # Helix editor configuration
 ├── starship/              # Starship prompt configuration
-├── tmux/                  # Tmux layout, Monokai theme, and popups
+├── tmux/                  # Tmux configuration (submodule: michalgr/tmux-config)
 └── zsh/                   # Zsh configuration, aliases, and agent-jail helper
 ```
 
@@ -26,9 +26,9 @@ Personal macOS dotfiles managed declaratively using **Homebrew** and **GNU Stow*
    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
    ```
 
-2. Clone this repository:
+2. Clone this repository (with submodules):
    ```bash
-   git clone git@github.com:michalgr/.dotfiles.git ~/projects/.dotfiles
+   git clone --recurse-submodules git@github.com:michalgr/.dotfiles.git ~/projects/.dotfiles
    cd ~/projects/.dotfiles
    ```
 
