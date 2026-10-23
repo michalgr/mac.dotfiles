@@ -1,3 +1,6 @@
 [submodule "tmux/.config/tmux"]
 	path = tmux/.config/tmux
 	url = git@github.com:michalgr/tmux-config.git
+[submodule "agents/.config/agents"]
+	path = agents/.config/agents
+	url = git@github.com:michalgr/agents-config.git

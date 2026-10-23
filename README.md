@@ -11,6 +11,7 @@ Personal macOS dotfiles managed declaratively using **Homebrew** and **GNU Stow*
 .dotfiles/
 ├── Brewfile               # macOS formulae & tools
 ├── bootstrap.sh           # One-step installer (brew bundle + stow)
+├── agents/                # AI agent rules & skills (submodule: michalgr/agents-config)
 ├── ghostty/               # Ghostty terminal configuration
 ├── git/                   # Git & Delta diff configuration
 ├── helix/                 # Helix editor configuration
