@@ -5,7 +5,7 @@ DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 echo "==> Bootstrapping dotfiles from $DOTFILES_DIR"
 
-# 0. Initialize git submodules (e.g. tmux-config)
+# 0. Initialize git submodules (e.g. tmux-config, agents-config)
 git -C "$DOTFILES_DIR" submodule update --init --recursive
 
 # 1. Install Homebrew packages
@@ -26,6 +26,9 @@ if [ -d "$HOME/.config/helix" ] && [ -z "$(ls -A "$HOME/.config/helix" 2>/dev/nu
 fi
 if [ -d "$HOME/.config/ghostty" ] && [ -z "$(ls -A "$HOME/.config/ghostty" 2>/dev/null)" ]; then
   rmdir "$HOME/.config/ghostty"
+fi
+if [ -d "$HOME/.gemini/rules" ] && [ ! -L "$HOME/.gemini/rules" ] && [ -z "$(ls -A "$HOME/.gemini/rules" 2>/dev/null)" ]; then
+  rmdir "$HOME/.gemini/rules"
 fi
 if [ -d "$HOME/.gemini/config/skills" ] && [ ! -L "$HOME/.gemini/config/skills" ] && [ -z "$(ls -A "$HOME/.gemini/config/skills" 2>/dev/null)" ]; then
   rmdir "$HOME/.gemini/config/skills"
